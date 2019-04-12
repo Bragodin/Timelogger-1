@@ -35,20 +35,23 @@
   </div>
 
   <div class="params">
-    <div class="approval">
+    <div class="approval" >
       <p>Approval Period: </p>
-      <mat-select [(value)]="selected">
-        <mat-option value="option1">1 week</mat-option>
-        <mat-option value="option2">month</mat-option>
+      <mat-select>
+        <mat-option (click)="t()" value="option1">1 week</mat-option>
+        <mat-option (click)="t()" value="option2">2 week</mat-option>
+        <mat-option (click)="t()" value="option3">1 month</mat-option>
+        <mat-option (click)="f()" value="option4">I don’t need approvals</mat-option>
       </mat-select>
-      <mat-slide-toggle>Submit Time Logs automatically in the end of period</mat-slide-toggle>
+      <mat-slide-toggle [ngClass]="{appr: flag}">Submit Time Logs automatically in the end of period</mat-slide-toggle>
     </div>
-    <div class="approval">
+    <div class="approval" [ngClass]="{appr: flag}">
       <p>Notify about difference between expected and actual time: </p>
       <mat-checkbox>Sick Leave</mat-checkbox>
       <mat-checkbox>Business Trip</mat-checkbox>
     </div>
-    <div class="approval">
+
+    <div class="approval" [ngClass]="{appr: flag}">
       <mat-slide-toggle> Ability to forget timesheets</mat-slide-toggle>
     </div>
 
@@ -66,5 +69,7 @@
   </div>
   <div class="integrations">
     <h3>Integrations: </h3>
+
+    <app-integrations></app-integrations>
   </div>
 </div>

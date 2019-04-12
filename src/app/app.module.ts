@@ -29,6 +29,8 @@ import {TimelogComponent} from "./timelog/timelog.component";
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio'
+import {IntegrationsComponent} from './integrations/integrations.component';
+
 
 
 @NgModule({
@@ -48,6 +50,7 @@ import {MatRadioModule} from '@angular/material/radio'
     TimesheetByWeekComponent,
     TimelogComponent,
     CompanySettingsComponent,
+    IntegrationsComponent,
   ],
   imports: [
     BrowserModule,

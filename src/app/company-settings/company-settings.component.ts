@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-company-settings',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompanySettingsComponent implements OnInit {
 
+  flag: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  f(){
+    this.flag = true;
+  }
+  t(){
+    this.flag = false;
+  }
 }
