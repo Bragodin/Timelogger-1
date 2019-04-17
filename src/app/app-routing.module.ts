@@ -9,9 +9,11 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import {CompanySettingsComponent} from "./company-settings/company-settings.component";
 import {ProjectComponent} from "./project/project.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {TimelogComponent} from "./timelog/timelog.component";
 
 
 const itemMenu: Routes = [
+  { path: 'timelog-day', component: TimelogComponent},
   { path: 'profile', component: ProfileComponent},
   { path: 'create_pro', component: CreateProjectComponent},
   { path: 'projects', component: ProjectComponent},
