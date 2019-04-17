@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./progress.component.sass']
 })
 export class ProgressComponent implements OnInit {
-
+  selected = 'option2';
   constructor() { }
 
   ngOnInit() {
