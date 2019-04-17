@@ -1,70 +1,24 @@
-<div class="company">
-  <div class="input">
+<app-container [ngStyle]="{'width': '1025px'}">
+  <div class="box">
     <input type="text">
     <button>Save</button>
   </div>
-  <div class="params">
-    <div class="box">
-      <p>Company activities: </p>
-      <mat-checkbox>Vacation</mat-checkbox>
-      <mat-checkbox>Sick Leave</mat-checkbox>
-      <mat-checkbox>Business Trip</mat-checkbox>
-    </div>
-    <div class="box">
-      <p>Default Projects: </p>
-      <mat-select >
-        <mat-option value="option1">1 week</mat-option>
-      </mat-select>
-      <mat-select >
-        <mat-option value="option1">1 week</mat-option>
-      </mat-select>
-    </div>
-    <div class="box">
-      <p>Start week from: </p>
-      <mat-radio-button>Sunday</mat-radio-button>
-      <mat-radio-button>Monday</mat-radio-button>
-    </div>
-    <div class="box">
-      <p>Default Workload: </p>
-    </div>
-  </div>
-</div>
-<div class="approval_period">
-  <div class="input">
-    <h3>Approval Period: </h3>
-  </div>
+  <app-company-properties></app-company-properties>
+</app-container>
 
-  <div class="params">
-    <div class="approval">
-      <p>Approval Period: </p>
-      <mat-select [(value)]="selected">
-        <mat-option value="option1">1 week</mat-option>
-        <mat-option value="option2">month</mat-option>
-      </mat-select>
-      <mat-slide-toggle>Submit Time Logs automatically in the end of period</mat-slide-toggle>
-    </div>
-    <div class="approval">
-      <p>Notify about difference between expected and actual time: </p>
-      <mat-checkbox>Sick Leave</mat-checkbox>
-      <mat-checkbox>Business Trip</mat-checkbox>
-    </div>
-    <div class="approval">
-      <mat-slide-toggle> Ability to forget timesheets</mat-slide-toggle>
-    </div>
+<app-container>
+  <h3>Approval Period: </h3>
+  <app-approval-period></app-approval-period>
+</app-container>
 
-</div>
-</div>
 <div  class="comment">
-  <div class="comments">
+  <app-container>
     <h3>Comments: </h3>
-<div class="approval">
-  <mat-slide-toggle>Comments to each task are required</mat-slide-toggle>
-  <p>Custom comments validation: </p>
-  <input class="input_comments" type="text">
-</div>
+    <app-comments></app-comments>
 
-  </div>
-  <div class="integrations">
+  </app-container>
+  <app-container>
     <h3>Integrations: </h3>
-  </div>
+    <app-integrations></app-integrations>
+  </app-container>
 </div>
