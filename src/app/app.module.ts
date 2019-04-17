@@ -30,6 +30,10 @@ import { CompanySettingsComponent } from './company-settings/company-settings.co
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio'
 import {IntegrationsComponent} from './integrations/integrations.component';
+import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
+import { CommentsComponent } from './comments/comments.component';
+import { CompanyPropertiesComponent } from './company-properties/company-properties.component';
+import { ContainerComponent } from './container/container.component';
 
 
 
@@ -51,6 +55,10 @@ import {IntegrationsComponent} from './integrations/integrations.component';
     TimelogComponent,
     CompanySettingsComponent,
     IntegrationsComponent,
+    ApprovalPeriodComponent,
+    CommentsComponent,
+    CompanyPropertiesComponent,
+    ContainerComponent,
   ],
   imports: [
     BrowserModule,
