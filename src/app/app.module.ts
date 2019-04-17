@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { PageComponent } from './page/page.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -34,6 +34,13 @@ import { ApprovalPeriodComponent } from './approval-period/approval-period.compo
 import { CommentsComponent } from './comments/comments.component';
 import { CompanyPropertiesComponent } from './company-properties/company-properties.component';
 import { ContainerComponent } from './container/container.component';
+import { ProgressComponent } from './progress/progress.component';
+import { ProjectComponent } from './project/project.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MenuComponent } from './menu/menu.component';
+import { HeaderComponent } from './header/header.component';
+import { LogoUserCompanyComponent } from './logo-user-company/logo-user-company.component';
+import { NotificationPreferencesComponent } from './notification-preferences/notification-preferences.component';
 
 
 
@@ -41,7 +48,7 @@ import { ContainerComponent } from './container/container.component';
   declarations: [
     AppComponent,
     ProfileComponent,
-    ProjectsComponent,
+    PageComponent,
     CreateProjectComponent,
     SignComponent,
     ResetPasswordComponent,
@@ -59,6 +66,13 @@ import { ContainerComponent } from './container/container.component';
     CommentsComponent,
     CompanyPropertiesComponent,
     ContainerComponent,
+    ProgressComponent,
+    ProjectComponent,
+    SidebarComponent,
+    MenuComponent,
+    HeaderComponent,
+    LogoUserCompanyComponent,
+    NotificationPreferencesComponent,
   ],
   imports: [
     BrowserModule,
