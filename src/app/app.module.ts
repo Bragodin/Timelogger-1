@@ -41,6 +41,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { LogoUserCompanyComponent } from './logo-user-company/logo-user-company.component';
 import { NotificationPreferencesComponent } from './notification-preferences/notification-preferences.component';
+import { EmployeeInformationComponent } from './employee-information/employee-information.component';
 
 
 
@@ -73,6 +74,7 @@ import { NotificationPreferencesComponent } from './notification-preferences/not
     HeaderComponent,
     LogoUserCompanyComponent,
     NotificationPreferencesComponent,
+    EmployeeInformationComponent,
   ],
   imports: [
     BrowserModule,
