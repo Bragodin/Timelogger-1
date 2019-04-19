@@ -46,6 +46,7 @@ import { NotificationPreferencesComponent } from './notification-preferences/not
 import { EmployeeInformationComponent } from './employee-information/employee-information.component';
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
+import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
 
 
 
@@ -82,6 +83,7 @@ import { BlockComponent } from './block/block.component';
     EmployeeInformationComponent,
     HeadComponent,
     BlockComponent,
+    ApproveRejectForgetComponent,
   ],
   imports: [
     BrowserModule,

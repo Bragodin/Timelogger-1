@@ -1,21 +1,22 @@
-<div class="employees-header">
-  <div class="buttons">
-    <button>Active</button>
-    <button>Deactivated</button>
-    <button>Pending</button>
+<app-block>
+  <div class="employees-header">
+    <div class="buttons">
+      <button>Active</button>
+      <button>Deactivated</button>
+      <button>Pending</button>
+    </div>
+    <div class="invite">
+      <span>Invite an employee:</span>
+      <input type="text" name="" id="" placeholder="alex@timesheet.com">
+      <select>
+        <option value="">Chose Role</option>
+      </select>
+      <button routerLinkActive="active" routerLink='/employees/add_employee'>Invite</button>
+    </div>
   </div>
-  <div class="invite">
-    <span>Invite an employee:</span>
-    <input type="text" name="" id="" placeholder="alex@timesheet.com">
-    <select>
-      <option value="">Chose Role</option>
-    </select>
-    <button routerLinkActive="active" routerLink='/employees/add_employee'>Invite</button>
-  </div>
-</div>
-<app-container>
-  <p>Table</p>
-</app-container>
-<app-container>
-  <app-export></app-export>
-</app-container>
+  <app-container class="table">
+    <p>Table</p>
+  </app-container>
+</app-block>
+
+

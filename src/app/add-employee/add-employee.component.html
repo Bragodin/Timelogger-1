@@ -1,27 +1,28 @@
-
-<app-container>
-  <app-employee-information></app-employee-information>
-</app-container>
-<div class="inline">
-  <app-container>
-    <app-bar-chart></app-bar-chart>
+<app-block>
+  <app-container class="person_information" >
+    <app-employee-information></app-employee-information>
   </app-container>
-  <app-container>
-    <p>Table</p>
-  </app-container>
-</div>
-
-<app-container>
   <div class="inline">
-    <p>Table</p>
-    <div>
-      <app-donut-chart></app-donut-chart>
-      <p>Comments</p>
-      <p>Buttons</p>
-    </div>
+    <app-container class="width_bar_chart">
+      <app-bar-chart></app-bar-chart>
+    </app-container>
+    <app-container class="table">
+      <p>Table</p>
+    </app-container>
   </div>
-</app-container>
 
-<app-container>
-  <p>Block export</p>
-</app-container>
+  <app-container>
+    <div class="inline_">
+      <p>Table</p>
+      <div class="donut_chart_and_buttons">
+        <app-donut-chart></app-donut-chart>
+        <app-approve-reject-forget></app-approve-reject-forget>
+      </div>
+    </div>
+  </app-container>
+
+  <app-container class="export">
+    <app-export></app-export>
+  </app-container>
+</app-block>
+
