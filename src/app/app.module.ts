@@ -17,7 +17,7 @@ import { SignComponent } from './sign/sign.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { MatTableModule } from '@angular/material/table';
-import { MatInputModule, MatSlideToggleModule } from '@angular/material';
+import {MatInputModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { WorkloadComponent } from './workload/workload.component';
 import { ChartsModule } from 'ng2-charts';
@@ -28,10 +28,9 @@ import { TimesheetByWeekComponent } from './timesheet-by-week/timesheet-by-week.
 import {TimelogComponent} from "./timelog/timelog.component";
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatRadioModule} from '@angular/material/radio';
 import { ExportComponent } from './export/export.component'
-import {MatRadioModule} from '@angular/material/radio'
 import {IntegrationsComponent} from './integrations/integrations.component';
 import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
 import { CommentsComponent } from './comments/comments.component';
@@ -47,6 +46,7 @@ import { NotificationPreferencesComponent } from './notification-preferences/not
 import { EmployeeInformationComponent } from './employee-information/employee-information.component';
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
+
 
 
 @NgModule({
@@ -99,6 +99,9 @@ import { BlockComponent } from './block/block.component';
     MatCheckboxModule,
     MatRadioModule,
     MatSlideToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
