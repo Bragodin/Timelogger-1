@@ -1,37 +1,4 @@
-<div class="all-block">
-    <div class="left-block">
-      <form action="">
-        <input type="text" placeholder="YayFan">
-        <label for="">Start Date</label>
-        <input type="text" class="date-input" placeholder="08/02/2017" pattern="\d{1,2}/\d{1,2}/\d{4}">
-        <label for="">End Date</label>
-        <input type="text" class="date-input" placeholder="08/02/2020" pattern="\d{1,2}/\d{1,2}/\d{4}">
-        <label for="">Team</label>
-        <!-- <app-team-worker></app-team-worker> -->
-        <div class="before-input">
-          <a routerLinkActive="active" routerLink="/menu/add-employee">+</a>
-          <input type="text" class="add-emloyee" placeholder="Add Employee">
-        </div>
-        <label for="">Integrations:</label>
-        <div class="before-input">
-          <b class="b-text">Yira</b>
-          <input type="search" placeholder="" value="https://">
-        </div>
-      </form>
-    </div>
-    <div class="right-block">
-      <input type="color" class="color-input">
-      <div class="input-s">
-        <label for="text">#</label>
-        <input type="text" placeholder="yai">
-      </div>
-      <p>Progress in man/hours:</p>
-      <mat-progress-bar value='60' max-value='100'></mat-progress-bar>
-      <div class="buttons">
-        <button>PAUSE</button>
-        <button>ARCHIEVE</button>
-      </div>
-    </div>
-  </div>
-
+<app-container>
+  <app-progress></app-progress>
+</app-container>
 

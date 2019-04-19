@@ -17,27 +17,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class TimelogComponent implements OnInit {
 
-  timeNow: string = '';
-  toggleFlag: boolean = true;
-  displayedColumns: string[] = ['project', 'time', 'comment'];
-  dataSource = ELEMENT_DATA;
-  time(){
-    this.toggleFlag = false;
-    let now = new Date();
-    this.timeNow = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-  }
-  public timelog: Array<Object> = [
-    {
-      route: '/timelog-day',
 
-    },
-    {
-      route: '/timelog-week'
-    },
-    {
-      route: '/timelog-month'
-    },
-  ];
   constructor() { }
 
   ngOnInit() {

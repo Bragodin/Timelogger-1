@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { PageComponent } from './page/page.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -28,15 +28,32 @@ import { TimesheetByWeekComponent } from './timesheet-by-week/timesheet-by-week.
 import {TimelogComponent} from "./timelog/timelog.component";
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
 import {MatRadioModule} from '@angular/material/radio';
 import { ExportComponent } from './export/export.component'
+import {MatRadioModule} from '@angular/material/radio'
+import {IntegrationsComponent} from './integrations/integrations.component';
+import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
+import { CommentsComponent } from './comments/comments.component';
+import { CompanyPropertiesComponent } from './company-properties/company-properties.component';
+import { ContainerComponent } from './container/container.component';
+import { ProgressComponent } from './progress/progress.component';
+import { ProjectComponent } from './project/project.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MenuComponent } from './menu/menu.component';
+import { HeaderComponent } from './header/header.component';
+import { LogoUserCompanyComponent } from './logo-user-company/logo-user-company.component';
+import { NotificationPreferencesComponent } from './notification-preferences/notification-preferences.component';
+import { EmployeeInformationComponent } from './employee-information/employee-information.component';
+import { HeadComponent } from './head/head.component';
+import { BlockComponent } from './block/block.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    ProjectsComponent,
+    PageComponent,
     CreateProjectComponent,
     SignComponent,
     ResetPasswordComponent,
@@ -50,6 +67,21 @@ import { ExportComponent } from './export/export.component'
     TimelogComponent,
     CompanySettingsComponent,
     ExportComponent,
+    IntegrationsComponent,
+    ApprovalPeriodComponent,
+    CommentsComponent,
+    CompanyPropertiesComponent,
+    ContainerComponent,
+    ProgressComponent,
+    ProjectComponent,
+    SidebarComponent,
+    MenuComponent,
+    HeaderComponent,
+    LogoUserCompanyComponent,
+    NotificationPreferencesComponent,
+    EmployeeInformationComponent,
+    HeadComponent,
+    BlockComponent,
   ],
   imports: [
     BrowserModule,
