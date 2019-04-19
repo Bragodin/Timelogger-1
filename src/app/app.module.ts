@@ -25,11 +25,11 @@ import { DonutChartComponent } from './donut-chart/donut-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { MonthlyWorkloadComponent } from './monthly-workload/monthly-workload.component';
 import { TimesheetByWeekComponent } from './timesheet-by-week/timesheet-by-week.component';
-import {TimelogComponent} from "./timelog/timelog.component";
+import { TimelogComponent } from "./timelog/timelog.component";
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio'
-import {IntegrationsComponent} from './integrations/integrations.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio'
+import { IntegrationsComponent } from './integrations/integrations.component';
 import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CompanyPropertiesComponent } from './company-properties/company-properties.component';
@@ -42,8 +42,9 @@ import { HeaderComponent } from './header/header.component';
 import { LogoUserCompanyComponent } from './logo-user-company/logo-user-company.component';
 import { NotificationPreferencesComponent } from './notification-preferences/notification-preferences.component';
 import { EmployeeInformationComponent } from './employee-information/employee-information.component';
-
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ExportComponent } from './export/export.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { EmployeeInformationComponent } from './employee-information/employee-in
     LogoUserCompanyComponent,
     NotificationPreferencesComponent,
     EmployeeInformationComponent,
+    ExportComponent,
   ],
   imports: [
     BrowserModule,
@@ -92,6 +94,8 @@ import { EmployeeInformationComponent } from './employee-information/employee-in
     MatCheckboxModule,
     MatRadioModule,
     MatSlideToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
