@@ -1,26 +1,34 @@
-<app-container>
+<app-block>
+  <app-container>
+    <div class="box">
+      <p>Information</p>
+      <p>Table</p>
+    </div>
+  </app-container>
   <div class="box">
-    <p>Information</p>
-    <p>Table</p>
-  </div>
+    <app-container class="bar_chart">
 
-</app-container>
-<app-container>
-  <app-bar-chart></app-bar-chart>
-</app-container>
-<app-container>
-  <div class="box">
-    <p>Table</p>
-    <app-donut-chart></app-donut-chart>
-  </div>
+        <app-bar-chart ></app-bar-chart>
 
-</app-container>
-<app-container>
-  <div class="box">
-    <p>Table</p>
-    <app-donut-chart></app-donut-chart>
+    </app-container>
   </div>
-</app-container>
-<app-container>
-  <app-notification-preferences></app-notification-preferences>
-</app-container>
+  <app-container>
+    <div class="box">
+      <p>Table</p>
+      <app-donut-chart></app-donut-chart>
+    </div>
+
+  </app-container>
+  <app-container>
+    <div class="box">
+      <p>Table</p>
+      <app-donut-chart></app-donut-chart>
+    </div>
+  </app-container>
+  <app-container>
+    <app-notification-preferences></app-notification-preferences>
+  </app-container>
+</app-block>
+
+
+

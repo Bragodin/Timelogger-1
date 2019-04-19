@@ -14,13 +14,15 @@
   <div class="progress__section progress-section__second">
     <p>Project type:</p>
     <mat-form-field>
-      <mat-label></mat-label>
-      <mat-select [(value)]="selected">
-        <mat-option>None</mat-option>
-        <mat-option value="option1">Option 1</mat-option>
-        <mat-option value="option2">Option 2</mat-option>
-        <mat-option value="option3">Option 3</mat-option>
-      </mat-select>
+
+        <mat-label></mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+
     </mat-form-field>
     <div class="progress-bar">
       <p class="progress-bar__p_currently">Currently spend:</p>
@@ -39,12 +41,12 @@
     </div>
     <div class="progress__section_date">
       <p>End date:</p>
-      <mat-form-field class="progress__section_date_input">
-        <input matInput [matDatepicker]="picker2" placeholder="Angular" >
-        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2></mat-datepicker>
-      </mat-form-field>
-    </div>
+
+      <input placeholder="23 Jan, 2020" class="progress__input_type_date">
+      <i class="material-icons progress__section_date_start_icon">
+        today
+      </i>
+      </div>
   </div>
 </div>
 

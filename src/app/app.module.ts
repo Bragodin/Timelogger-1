@@ -17,7 +17,7 @@ import { SignComponent } from './sign/sign.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { MatTableModule } from '@angular/material/table';
-import { MatInputModule, MatSlideToggleModule } from '@angular/material';
+import {MatInputModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { WorkloadComponent } from './workload/workload.component';
 import { ChartsModule } from 'ng2-charts';
@@ -27,9 +27,17 @@ import { MonthlyWorkloadComponent } from './monthly-workload/monthly-workload.co
 import { TimesheetByWeekComponent } from './timesheet-by-week/timesheet-by-week.component';
 import { TimelogComponent } from "./timelog/timelog.component";
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
+
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio'
 import { IntegrationsComponent } from './integrations/integrations.component';
+
+
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import { ExportComponent } from './export/export.component'
+
+
 import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CompanyPropertiesComponent } from './company-properties/company-properties.component';
@@ -42,9 +50,11 @@ import { HeaderComponent } from './header/header.component';
 import { LogoUserCompanyComponent } from './logo-user-company/logo-user-company.component';
 import { NotificationPreferencesComponent } from './notification-preferences/notification-preferences.component';
 import { EmployeeInformationComponent } from './employee-information/employee-information.component';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { ExportComponent } from './export/export.component';
+
+import { HeadComponent } from './head/head.component';
+import { BlockComponent } from './block/block.component';
+import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
+
 
 @NgModule({
   declarations: [
@@ -63,6 +73,7 @@ import { ExportComponent } from './export/export.component';
     TimesheetByWeekComponent,
     TimelogComponent,
     CompanySettingsComponent,
+    ExportComponent,
     IntegrationsComponent,
     ApprovalPeriodComponent,
     CommentsComponent,
@@ -76,7 +87,13 @@ import { ExportComponent } from './export/export.component';
     LogoUserCompanyComponent,
     NotificationPreferencesComponent,
     EmployeeInformationComponent,
+
     ExportComponent,
+
+    HeadComponent,
+    BlockComponent,
+    ApproveRejectForgetComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -96,6 +113,7 @@ import { ExportComponent } from './export/export.component';
     MatSlideToggleModule,
     MatDatepickerModule,
     MatNativeDateModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

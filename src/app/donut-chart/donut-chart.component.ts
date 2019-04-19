@@ -30,7 +30,7 @@ export class DonutChartComponent implements OnInit {
       options: {
         cutoutPercentage: 90,
         legend: {
-        position: 'right',
+          position: 'bottom',
         },
         animation: {
           animateScale: true,

@@ -1,39 +1,13 @@
-<div class="employees-header">
-  <div class="data">
-    <i class="material-icons">chevron_left</i>
-    <p>24/04/2019</p>
-    <i class="material-icons">chevron_right</i>
+<app-block>
+  <app-head class="table"></app-head>
+
+  <div class="inline">
+    <app-container class="table">
+      <p>Table</p>
+    </app-container>
+    <app-container class="chart">
+      <app-donut-chart></app-donut-chart>
+    </app-container>
   </div>
-  <div class="buttons">
-    <button [routerLink]="timelog[0].route">Day</button>
-    <button [routerLink]="timelog[1].route">Week</button>
-    <button [routerLink]="timelog[2].route">Month</button>
-  </div>
-  <div *ngIf="toggleFlag; else elseBlock">
-    <button (click) = time() class="button__save">Save</button>
-  </div>
-  <ng-template #elseBlock>
-    <button (click) = time() class="button_save_time">Save at {{timeNow}}</button>
-  </ng-template>
-</div>
+</app-block>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-  <ng-container matColumnDef="project">
-    <th mat-header-cell *matHeaderCellDef> Project </th>
-    <td mat-cell *matCellDef="let element"> {{element.project}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="time">
-    <th mat-header-cell *matHeaderCellDef> Time (hours) </th>
-    <td mat-cell *matCellDef="let element"> {{element.time}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="comment">
-    <th mat-header-cell *matHeaderCellDef> Comment </th>
-    <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
