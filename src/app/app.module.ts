@@ -28,6 +28,9 @@ import { TimesheetByWeekComponent } from './timesheet-by-week/timesheet-by-week.
 import {TimelogComponent} from "./timelog/timelog.component";
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import {MatRadioModule} from '@angular/material/radio';
+import { ExportComponent } from './export/export.component'
 import {MatRadioModule} from '@angular/material/radio'
 import {IntegrationsComponent} from './integrations/integrations.component';
 import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
@@ -44,7 +47,6 @@ import { NotificationPreferencesComponent } from './notification-preferences/not
 import { EmployeeInformationComponent } from './employee-information/employee-information.component';
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
-
 
 
 @NgModule({
@@ -64,6 +66,7 @@ import { BlockComponent } from './block/block.component';
     TimesheetByWeekComponent,
     TimelogComponent,
     CompanySettingsComponent,
+    ExportComponent,
     IntegrationsComponent,
     ApprovalPeriodComponent,
     CommentsComponent,

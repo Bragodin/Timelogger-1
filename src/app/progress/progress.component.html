@@ -14,13 +14,15 @@
   <div class="progress__section progress-section__second">
     <p>Project type:</p>
     <mat-form-field>
-      <mat-label></mat-label>
-      <mat-select [(value)]="selected">
-        <mat-option>None</mat-option>
-        <mat-option value="option1">Option 1</mat-option>
-        <mat-option value="option2">Option 2</mat-option>
-        <mat-option value="option3">Option 3</mat-option>
-      </mat-select>
+
+        <mat-label></mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+
     </mat-form-field>
     <div class="progress-bar">
       <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
@@ -40,7 +42,8 @@
       <i class="material-icons progress__section_date_start_icon">
         today
       </i>
-    </div>
+      </div>
+
   </div>
 </div>
 
