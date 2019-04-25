@@ -1,16 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'chart.js';
+import { Information } from './example.inform';
+import { DonutData } from './example.inform';
 @Component({
   selector: 'app-donut-chart',
   templateUrl: './donut-chart.component.html',
   styleUrls: ['./donut-chart.component.sass']
 })
 export class DonutChartComponent implements OnInit {
-  DoughnutChart: any = [];
-  realResult: number = 23;
-  expectedResult: number = 20;
-
+  DoughnutChart: object = [];
+  realResult: number;
+  expectedResult: number;
+  h: string = '';
+  a: any = [];
+  constructor(inf: Information){
+    this.a = inf;
+  }
   ngOnInit(){
+    console.log(this.a.items);
     Chart.defaults.global.legend.labels.usePointStyle = true;
     this.DoughnutChart = new Chart('doughnutChart', {
       type: 'doughnut',
@@ -30,7 +37,7 @@ export class DonutChartComponent implements OnInit {
       options: {
         cutoutPercentage: 90,
         legend: {
-          position: 'bottom',
+          position: 'right',
         },
         animation: {
           animateScale: true,
@@ -51,8 +58,10 @@ export class DonutChartComponent implements OnInit {
 
         var fontSize = (height / 114).toFixed(2);
         ctx.font = fontSize + "em sans-serif";
-
-        let sum = '10/44';
+        this.realResult = 10;
+        this.expectedResult = 20;
+        this.h = '';
+        let sum =  this.realResult + '/' + this.expectedResult + this.h;
         let text = sum, textX, textY;
         textX = height / 2;
         textY = height / 2;

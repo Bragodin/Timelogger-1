@@ -7,7 +7,7 @@
 
 
   <app-container>
-    <p>Table</p>
+    <app-table [tableData]="tableData" (onRemove)="removeItem($event)"></app-table>
   </app-container>
 </app-block>
 

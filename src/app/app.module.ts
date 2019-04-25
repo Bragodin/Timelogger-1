@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { TableComponent } from './table/table.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -54,10 +54,12 @@ import { EmployeeInformationComponent } from './employee-information/employee-in
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
 import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
-
-
+import { CellComponent } from './table/cell/cell.component';
+import { Information } from './donut-chart/example.inform';
 @NgModule({
   declarations: [
+    CellComponent,
+    TableComponent,
     AppComponent,
     ProfileComponent,
     PageComponent,
@@ -115,7 +117,7 @@ import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-re
     MatNativeDateModule,
 
   ],
-  providers: [],
+  providers: [Information],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

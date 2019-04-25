@@ -6,15 +6,14 @@
     <input class="progress__input progress__code_input">
     <button class="progress-section__button"><a href="#">IN PROGRESS</a></button>
     <div class="progress-section__first_buttons">
-      <button class="progress-section__first_buttons_button progress-section__first_buttons_button_first"><a href="">Pause<i class="material-icons material-icons__pause">pause</i></a></button>
-      <button class="progress-section__first_buttons_button progress-section__first_buttons_button_second"><a href="">Archive<i class="material-icons material-icons__pause">stop</i></a></button>
-      <button class="progress-section__first_buttons_button progress-section__first_buttons_button_third"><a href="">Save</a></button>
+      <button class="progress-section__first_buttons_button"><a href="">Pause<i class="material-icons material-icons__pause">pause</i></a></button>
+      <button class="progress-section__first_buttons_button"><a href="">Archive</a></button>
+      <button class="progress-section__first_buttons_button"><a href="">Save</a></button>
     </div>
   </div>
   <div class="progress__section progress-section__second">
     <p>Project type:</p>
     <mat-form-field>
-
         <mat-label></mat-label>
         <mat-select [(value)]="selected">
           <mat-option>None</mat-option>
@@ -22,26 +21,21 @@
           <mat-option value="option2">Option 2</mat-option>
           <mat-option value="option3">Option 3</mat-option>
         </mat-select>
-
     </mat-form-field>
     <div class="progress-bar">
-      <p class="progress-bar__p_currently">Currently spend:</p>
       <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-      <p class="progress-bar__p_expected">Expected:</p>
     </div>
   </div>
-  <div class="progress__section progress-section__second_third">
+  <div class="progress__section">
     <div class="progress__section_date">
       <p>Start date:</p>
-      <mat-form-field class="progress__section_date_input">
-        <input matInput [matDatepicker]="picker1" placeholder="Angular" >
-        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-        <mat-datepicker #picker1></mat-datepicker>
-      </mat-form-field>
+      <input placeholder="23 Jan, 2018" class="progress__input_type_date">
+      <i class="material-icons">
+        today
+      </i>
     </div>
     <div class="progress__section_date">
       <p>End date:</p>
-
       <input placeholder="23 Jan, 2020" class="progress__input_type_date">
       <i class="material-icons progress__section_date_start_icon">
         today
@@ -49,5 +43,6 @@
       </div>
   </div>
 </div>
+
 
 
