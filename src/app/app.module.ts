@@ -47,6 +47,7 @@ import { EmployeeInformationComponent } from './employee-information/employee-in
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
 import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
+import { TableComponent } from './table/table.component';
 
 
 
@@ -84,6 +85,7 @@ import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-re
     HeadComponent,
     BlockComponent,
     ApproveRejectForgetComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
