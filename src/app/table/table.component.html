@@ -1,0 +1,8 @@
+<table class="table">
+    <tr *ngFor="let rowData of tableData; let i=index;">
+      <app-cell *ngFor="let cellData of objectKeys(rowData) let first=first; let last= last;"
+                [cellData]="tableData[i][cellData]"
+                [ngClass]="{first:first,last:last}"></app-cell>
+      <button class="removeButton" (click)="removeLine(i)"><i class="material-icons">clear</i></button>
+    </tr>
+  </table>
