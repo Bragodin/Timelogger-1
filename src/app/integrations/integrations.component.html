@@ -1,66 +1,70 @@
-<div *ngIf="toggleFlag; else elseBlock">
-  <div class="add_new">
-    <p>Add new </p>
-    <i (click)=updown() class="material-icons">keyboard_arrow_down</i>
-  </div>
-
-</div>
-
-<ng-template #elseBlock>
-  <div>
+<h3>Connected integrations: </h3>
+<div>
+  <div *ngIf="toggleFlag; else elseBlock">
     <div class="add_new">
       <p>Add new </p>
-      <i (click)=updown() class="material-icons">keyboard_arrow_up</i>
+      <i (click)=updown() class="material-icons">keyboard_arrow_down</i>
     </div>
-    <div class="integrations">
-      <div class="logo">
-        <div class="AtlassianJira">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
 
-      <div class="logo">
-        <div class="Slack">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
-
-      <div class="logo">
-        <div class="GitHub">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
-
-      <div class="logo">
-        <div class="Trello">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
-
-      <div class="logo">
-        <div class="IDE">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
-
-      <div class="logo">
-        <div class="Git">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
-
-      <div class="logo">
-        <div class="Telegram">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
-
-      <div class="logo">
-        <div class="Whatsapp">
-          <i class="material-icons">add</i>
-        </div>
-      </div>
-    </div>
   </div>
-</ng-template>
+
+  <ng-template #elseBlock>
+    <div>
+      <div class="add_new">
+        <p>Add new </p>
+        <i (click)=updown() class="material-icons">keyboard_arrow_up</i>
+      </div>
+      <div class="integrations">
+        <div class="logo">
+          <div class="AtlassianJira">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+
+        <div class="logo">
+          <div class="Slack">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+
+        <div class="logo">
+          <div class="GitHub">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+
+        <div class="logo">
+          <div class="Trello">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+
+        <div class="logo">
+          <div class="IDE">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+
+        <div class="logo">
+          <div class="Git">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+
+        <div class="logo">
+          <div class="Telegram">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+
+        <div class="logo">
+          <div class="Whatsapp">
+            <i class="material-icons">add</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
 
