@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-progress',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
   selected = 'option2';
-  constructor() {}
+
+  date = new FormControl(new Date());
+  serializedDate = new FormControl((new Date()).toISOString());
+  constructor() { }
+
   ngOnInit() {
   }
 

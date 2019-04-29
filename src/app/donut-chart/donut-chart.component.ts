@@ -8,6 +8,7 @@ import { items } from './donutChartDate';
   styleUrls: ['./donut-chart.component.sass']
 })
 export class DonutChartComponent implements OnInit {
+
   DoughnutChart;
   realResult: number;
   expectedResult: number;
@@ -21,6 +22,8 @@ export class DonutChartComponent implements OnInit {
         data: [],
         backgroundColor: [],
         borderWidth: 0,
+
+ 
     }]
       }
       for(let i = 0; i < items.length; i++){
