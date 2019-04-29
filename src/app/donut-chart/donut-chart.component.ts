@@ -1,39 +1,40 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'chart.js';
-import { Information } from './example.inform';
-import { DonutData } from './example.inform';
+import { items } from './donutChartDate';
+
 @Component({
   selector: 'app-donut-chart',
   templateUrl: './donut-chart.component.html',
   styleUrls: ['./donut-chart.component.sass']
 })
 export class DonutChartComponent implements OnInit {
-  DoughnutChart: object = [];
+
+  DoughnutChart;
   realResult: number;
   expectedResult: number;
   h: string = '';
-  a: any = [];
-  constructor(inf: Information){
-    this.a = inf;
-  }
+
+  constructor(){}
   ngOnInit(){
-    console.log(this.a.items);
+    let data = {
+      labels: [],
+      datasets: [{
+        data: [],
+        backgroundColor: [],
+        borderWidth: 0,
+
+ 
+    }]
+      }
+      for(let i = 0; i < items.length; i++){
+        data.labels.push(items[i].name);
+        data.datasets[0].backgroundColor.push(items[i].color);
+        data.datasets[0].data.push(items[i].value);
+      }
     Chart.defaults.global.legend.labels.usePointStyle = true;
     this.DoughnutChart = new Chart('doughnutChart', {
       type: 'doughnut',
-      data: {
-      labels: ["Office", "Miffort cour...", "Untracked", "Miffort cour...","Miffort cour..."],
-      datasets: [{
-        data: [9, 7, 3],
-        backgroundColor: [
-            '#FFD600',
-            '#FF0000',
-            '#C4C4C4',
-        ],
-        borderWidth: 0,
-
-    }]
-      },
+      data: data,
       options: {
         cutoutPercentage: 90,
         legend: {

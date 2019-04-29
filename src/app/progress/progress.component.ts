@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class ProgressComponent implements OnInit {
   selected = 'option2';
+
   date = new FormControl(new Date());
   serializedDate = new FormControl((new Date()).toISOString());
   constructor() { }

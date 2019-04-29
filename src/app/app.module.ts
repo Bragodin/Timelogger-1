@@ -54,8 +54,11 @@ import { EmployeeInformationComponent } from './employee-information/employee-in
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
 import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
+import { TableComponent } from './table/table.component';
+
 import { CellComponent } from './table/cell/cell.component';
 import { Information } from './donut-chart/example.inform';
+
 @NgModule({
   declarations: [
     CellComponent,
@@ -95,6 +98,7 @@ import { Information } from './donut-chart/example.inform';
     HeadComponent,
     BlockComponent,
     ApproveRejectForgetComponent,
+    TableComponent,
 
   ],
   imports: [
