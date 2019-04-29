@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
   selected = 'option2';
-  constructor() { }
-  
+  constructor() {}
   ngOnInit() {
   }
 
