@@ -1,6 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'chart.js';
+
+import { items } from './example.inform';
+
 import { items } from './donutChartDate';
+
 
 @Component({
   selector: 'app-donut-chart',
@@ -22,8 +26,6 @@ export class DonutChartComponent implements OnInit {
         data: [],
         backgroundColor: [],
         borderWidth: 0,
-
- 
     }]
       }
       for(let i = 0; i < items.length; i++){

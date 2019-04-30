@@ -13,8 +13,11 @@ export class BarChartComponent implements OnInit {
   @Output() barItemSelect;
   barChart: any = [];
 
-
   ngOnInit(){
+    chartDate.forEach((item) => {
+      item
+    });
+
     let data = {
       labels: labels,
       datasets: chartDate,

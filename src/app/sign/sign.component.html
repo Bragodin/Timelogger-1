@@ -1,15 +1,16 @@
 <div class="sign">
-  <div class="sign__image">
+    <div class="sign__image">
+    </div>
+    <div class="sign__form_container">
+      <form novalidate (ngSubmit)="onSubmit(user)" class="sign__form">
+        <h1 class="sign__form_name">Sign Up</h1>
+        <button class="google">Sign up with google</button>
+        <input type="text" placeholder="Full Name" [formControl]='fullNameControl' class="sign__form_input">
+        <input type="email" placeholder="Email" [formControl]='emailControl' class="sign__form_input">
+        <input type="password" placeholder="Password" [formControl]='passwordControl' class="sign__form_input">
+        <button class='sign__form_button' type="submit">Sign up</button>
+      </form>
+      <p class="sign__form_sign-in">Already have an account?<a href="#">Sign In</a></p>
+    </div>
   </div>
-  <div class="sign__form_container">
-    <form novalidate (ngSubmit)="onSubmit(user)" class="sign__form">
-      <h1 class="sign__form_name">Sign Up</h1>
-      <button class="google">Sign up with google</button>
-      <input type="text" placeholder="Full Name" [formControl]='fullNameControl' class="sign__form_input">
-      <input type="email" placeholder="Email" [formControl]='emailControl' class="sign__form_input">
-      <input type="password" placeholder="Password" [formControl]='passwordControl' class="sign__form_input">
-      <button class='sign__form_button' type="submit">Sign up</button>
-    </form>
-    <p class="sign__form_sign-in">Already have an account?<a href="#">Sign In</a></p>
-  </div>
-</div>
+

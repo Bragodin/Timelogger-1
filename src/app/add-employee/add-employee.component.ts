@@ -11,24 +11,24 @@ export interface IRowData {
 })
 export class AddEmployeeComponent implements OnInit {
   tableData: Array<IRowData> = [
-    { projectId:'Mifort',
-      employeeId:'HR',
+    { projectId:'Copses',
+      employeeId:'Project Manager',
       hours:6
     },
-    { projectId:'Mifort',
-      employeeId:'HR',
+    { projectId:'Mifort Courses',
+      employeeId:'HR Manager',
       hours:1
     },
-    { projectId:'Mifort',
-      employeeId:'HR',
+    { projectId:'Office',
+      employeeId:'Admin',
       hours:2
     },
-    { projectId:'Cource',
-      employeeId:'HR',
+    { projectId:'Copses',
+      employeeId:'Owner',
       hours:4
     },
-    { projectId:'Mifort',
-      employeeId:'Office',
+    { projectId:'Office',
+      employeeId:'Employee',
       hours:13
     }
   ];
@@ -36,6 +36,13 @@ export class AddEmployeeComponent implements OnInit {
   removeItem(index) {
     this.tableData.splice(index,1);
   }
+  addItem(option){
+    this.tableData.push({
+      projectId:option,
+      employeeId:option,
+      hours:0})
+  }
+  lable: string ='Projects: ';
   ngOnInit() {
   }
 
