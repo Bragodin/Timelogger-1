@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'chart.js';
-import { items } from './donutChartDate';
+import { items } from './example.inform';
 
 @Component({
   selector: 'app-donut-chart',
@@ -8,6 +8,7 @@ import { items } from './donutChartDate';
   styleUrls: ['./donut-chart.component.sass']
 })
 export class DonutChartComponent implements OnInit {
+
   DoughnutChart;
   realResult: number;
   expectedResult: number;

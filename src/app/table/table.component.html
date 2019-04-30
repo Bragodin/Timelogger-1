@@ -1,8 +1,45 @@
 <table class="table">
-    <tr *ngFor="let rowData of tableData; let i=index;">
-      <app-cell *ngFor="let cellData of objectKeys(rowData) let first=first; let last= last;"
-                [cellData]="tableData[i][cellData]"
-                [ngClass]="{first:first,last:last}"></app-cell>
-      <button class="removeButton" (click)="removeLine(i)"><i class="material-icons">clear</i></button>
-    </tr>
-  </table>
+  <span class="label">{{lable}}</span>
+
+  <tr *ngFor="let rowData of tableData; let i=index;">
+    <td>
+      <app-cell [changeProjectList]='changeProjectList' [cellData]="tableData[i]['projectId']"></app-cell>
+    </td>
+    <td>
+      <app-cell [changeProjectList]="changeEmploeeList" [cellData]="tableData[i]['employeeId']"></app-cell>
+    </td>
+    <td class="inputForm">
+      <mat-form-field>
+        <input matInput name="hours" [(ngModel)]="tableData[i]['hours']">
+      </mat-form-field>
+      <span class="labelHours">h/week</span>
+      <button class="removeButton" (click)="removeLine(i)"></button>
+    </td>
+  </tr>
+  <tr class="addRowData">
+    <td>
+      <mat-form-field>
+        <mat-select>
+          <mat-option *ngFor="let option of changeProjectList"(click)="addLine(option)">
+          {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field>
+        <mat-select >
+          <mat-option *ngFor="let option of changeEmploeeList"(click)="addLine(option)">
+          {{option}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field class="addInputForm">
+        <input matInput>
+      </mat-form-field>
+      <span class="labelHours">h/week</span>
+    </td>
+  </tr>
+</table>

@@ -2,26 +2,28 @@
   <app-container class="person_information" >
     <app-employee-information></app-employee-information>
   </app-container>
+
   <div class="inline">
     <app-container class="width_bar_chart">
       <app-bar-chart></app-bar-chart>
     </app-container>
     <app-container class="table">
-      <p>Table</p>
+      <app-table [tableData]="tableData" (onRemove)="removeItem($event)"></app-table>
     </app-container>
   </div>
 
-  <app-container>
-    <div class="inline_">
-      <p>Table</p>
+  <app-container class="for_approval">
+    <div class="inline">
+      <app-table [tableData]="tableData" (onRemove)="removeItem($event)"></app-table>
       <div class="donut_chart_and_buttons">
         <app-donut-chart></app-donut-chart>
         <app-approve-reject-forget></app-approve-reject-forget>
       </div>
     </div>
   </app-container>
-  <app-container class="export">
-    <app-export></app-export>
-  </app-container>
+<div class="inline">
+    <app-container class="export">
+        <app-export></app-export>
+    </app-container>
+</div>
 </app-block>
-

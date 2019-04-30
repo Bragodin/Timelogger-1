@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,10 +30,11 @@ import { TimesheetByWeekComponent } from './timesheet-by-week/timesheet-by-week.
 import { TimelogComponent } from "./timelog/timelog.component";
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatRadioModule } from '@angular/material/radio';
-import { ExportComponent } from './export/export.component'
+
+import { MatRadioModule } from '@angular/material/radio'
 import { IntegrationsComponent } from './integrations/integrations.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ExportComponent } from './export/export.component'
 import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CompanyPropertiesComponent } from './company-properties/company-properties.component';
@@ -43,16 +47,21 @@ import { HeaderComponent } from './header/header.component';
 import { LogoUserCompanyComponent } from './logo-user-company/logo-user-company.component';
 import { NotificationPreferencesComponent } from './notification-preferences/notification-preferences.component';
 import { EmployeeInformationComponent } from './employee-information/employee-information.component';
+
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
 import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
 import { TableComponent } from './table/table.component';
+
 import { ReactiveFormsModule  } from "@angular/forms";
 import { FormsModule } from '@angular/forms';
+
 import { CellComponent } from './table/cell/cell.component';
 
 @NgModule({
   declarations: [
+    CellComponent,
+    TableComponent,
     AppComponent,
     ProfileComponent,
     PageComponent,
@@ -82,12 +91,13 @@ import { CellComponent } from './table/cell/cell.component';
     LogoUserCompanyComponent,
     NotificationPreferencesComponent,
     EmployeeInformationComponent,
+    ExportComponent,
     HeadComponent,
     BlockComponent,
     ApproveRejectForgetComponent,
     TableComponent,
     CellComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -96,19 +106,19 @@ import { CellComponent } from './table/cell/cell.component';
     MatSidenavModule,
     MatToolbarModule,
     MatCardModule,
-    MatSelectModule,
     MatIconModule,
     MatProgressBarModule,
     MatTableModule,
     MatInputModule,
     ChartsModule,
     MatCheckboxModule,
+    MatSelectModule,
     MatRadioModule,
     MatSlideToggleModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
     FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

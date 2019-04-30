@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./integrations.component.sass']
 })
 export class IntegrationsComponent implements OnInit {
+  toggleFlag: boolean = true;
 
+  updown() {
+    this.toggleFlag = !this.toggleFlag;
+  }
   constructor() { }
 
   ngOnInit() {
