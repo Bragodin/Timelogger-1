@@ -1,16 +1,19 @@
 export let items = [
   {
-    value: 20,
+    expectedValue: 20,
+    realValue: 30,
     color: 'red',
     name: 'monday',
   },
   {
-    value: 20,
+    expectedValue: 20,
+    realValue: 30,
     color: 'green ',
     name: 'monday',
   },
   {
-    value: 20,
+    expectedValue: 20,
+    realValue: 30,
     color: 'green ',
     name: 'monday',
   }

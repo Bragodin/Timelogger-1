@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { items } from './donutChartDate';
+import { forEach } from '@angular/router/src/utils/collection';
+
 
 @Component({
   selector: 'app-donut-chart',
@@ -10,9 +12,8 @@ import { items } from './donutChartDate';
 export class DonutChartComponent implements OnInit {
 
   DoughnutChart;
-  realResult: number;
-  expectedResult: number;
-  h: string = '';
+  realResult: number = 0;
+  expectedResult: number = 0;
 
   constructor(){}
   ngOnInit(){
@@ -24,11 +25,17 @@ export class DonutChartComponent implements OnInit {
         borderWidth: 0,
     }]
       }
-      for(let i = 0; i < items.length; i++){
-        data.labels.push(items[i].name);
-        data.datasets[0].backgroundColor.push(items[i].color);
-        data.datasets[0].data.push(items[i].value);
-      }
+      items.forEach((element) => {
+        data.datasets[0].backgroundColor.push(element.color);
+        data.datasets[0].data.push(element.realValue);
+        this.realResult += element.realValue;
+        this.expectedResult += element.expectedValue;
+        data.labels.push(element.name + '     ' + element.realValue + '/' + element.expectedValue);
+      });
+
+    let rResult = this.realResult;
+    let eResult = this.expectedResult;
+
     Chart.defaults.global.legend.labels.usePointStyle = true;
     this.DoughnutChart = new Chart('doughnutChart', {
       type: 'doughnut',
@@ -55,17 +62,15 @@ export class DonutChartComponent implements OnInit {
             height = chart.height,
             ctx = chart.ctx;
 
-        var fontSize = (height / 114).toFixed(2);
+        var fontSize = (height / 75);
         ctx.font = fontSize + "em sans-serif";
-        this.realResult = 10;
-        this.expectedResult = 20;
         this.h = '';
-        let sum =  this.realResult + '/' + this.expectedResult + this.h;
-        let text = sum, textX, textY;
-        textX = height / 2;
-        textY = height / 2;
-        ctx.fillText(text, textX, textY);
+        let sum = rResult + '/' + eResult + 'h';
+        let textX = height / 4;
+        let textY = height / 2;
+        ctx.fillText(sum, textX, textY);
       }
     });
   }
 }
+
