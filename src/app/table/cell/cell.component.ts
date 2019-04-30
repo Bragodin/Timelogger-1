@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-cell',
@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CellComponent implements OnInit {
   @Input() cellData: string;
-  selected: string = '1';
+  @Input() changeProjectList: Array<string>;
+  selected: string = this.cellData;
   constructor() { }
 
   ngOnInit() {

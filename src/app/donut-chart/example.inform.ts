@@ -1,10 +1,4 @@
-export interface DonutData{
-  value: number;
-  color: string;
-  name: string;
-}
-export class Information{
-  items: Array<DonutData> = [
+export let items = [
     {
       value: 20,
       color: 'red',
@@ -19,11 +13,5 @@ export class Information{
       value: 20,
       color: 'green ',
       name: 'monday',
-    },
-    {
-      value: 20,
-      color: 'green ',
-      name: 'monday',
-    },
+    }
   ];
-}

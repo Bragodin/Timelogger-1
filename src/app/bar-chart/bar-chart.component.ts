@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Chart } from 'chart.js';
+import { chartDate } from './chartData';
+import { labels } from './chartData';
 @Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',
@@ -9,38 +11,18 @@ export class BarChartComponent implements OnInit {
   @Output() barSelect;
   @Output() barItemSelect;
   barChart: any = [];
-  // exp = new Examp();
 
   ngOnInit(){
-
+    chartDate.forEach((item) => {
+      item
+    });
+    let data = {
+      labels: labels,
+      datasets: chartDate,
+    }
     this.barChart = new Chart('barChart', {
       type: 'bar',
-      data: {
-        labels: ['far', 'far','far','far','far','far','far','far','far','far','far','far',],
-        datasets: [
-
-        {
-          label: 'Dataset 1',
-          data: [90, 70, 30, 50, 20, 100, 150, 0, 30, 90, 20, 25],
-          backgroundColor: 'green',
-          borderWidth: 1,
-        },
-
-        {
-        label: 'Dataset 2',
-        data: [20, 10, 50, 50, 20, 50, 50, 20, 100, 150, 0, 30 ],
-        backgroundColor: 'red',
-        borderWidth: 1,
-        },
-        {
-          label: 'Dataset 3',
-          data: [50, 50, 20, 50, 50, 20, 100, 90, 70, 30,  0, 30, ],
-          backgroundColor: 'yellow',
-          borderWidth: 1,
-        },
-      ]
-      },
-
+      data: data,
       options: {
         title: {
           display: true,
