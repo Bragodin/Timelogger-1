@@ -17,10 +17,10 @@
     width: 95px
 .circle
   border-radius: 50%
-  background: red
   width: 20px
   height: 20px
-  margin: 15px 30px 0px 10px
+.circle__main
+  margin: 10px 30px 0px 10px
 .progress-section__button
   font-family: 'Poppins', 'sans-serif'
   background: none
@@ -33,6 +33,8 @@
   width: 102px
   height: 17px
   margin-top: 15px
+  cursor: pointer
+  outline: none
   a
     text-decoration: none
     color: #8C8C8C
@@ -60,13 +62,9 @@
   color: #109CF1
   height: 24px
   margin-right: 10px
-  a
-    text-decoration: none
-    color: #109CF1
 .progress-section__first_buttons_button:hover
   background: #109CF1
-  a
-    color: #ffffff
+  color: #ffffff
 .material-icons__pause
   font-size: 16px
 .progress__section_date_start_icon
@@ -88,3 +86,23 @@
   margin-top: -70px
 .progress__section_date_input
   width: 100px
+.progress__color-picker
+  position: absolute
+  left: 265px
+  top: 155px
+  width: 220px
+  height: 130px
+  background: #FFFFFF
+  border-radius: 15px
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2)
+  h3
+    margin-left: 10px
+.progress__color-picker_elements
+  display: flex
+  flex-wrap: wrap
+  width: 200px
+  height: 75px
+  justify-content: space-between
+  margin-left: 10px
+.circle__colorc
+  margin-right: 5px

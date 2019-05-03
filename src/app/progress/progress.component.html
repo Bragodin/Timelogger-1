@@ -2,10 +2,12 @@
     <div class="progress__section progress-section__first">
       <input placeholder='{{projectName}}' class="progress__input progress__platform_input">
       <div class="circle circle__main" (click)="changeCondition()" [ngStyle]="{ 'background': activeColor }"></div>
-      <ng-template [ngIf]="!condition">
+      <ng-template [ngIf]="gcondition">
         <div class="progress__color-picker">
-          <h4>Pick a color:</h4>
-          <div class="circle" *ngFor = "let item of colors" (click)='changeColor(item)' [ngStyle]="{ 'background': item }"></div>
+          <h3>Pick a color:</h3>
+          <div class="progress__color-picker_elements">
+            <div class="circle circle__colorc" *ngFor = "let item of colors" (click)='changeColor(item)' [ngStyle]="{ 'background': item }"></div>
+          </div>
         </div>
       </ng-template>
       <p>Code: #</p>
