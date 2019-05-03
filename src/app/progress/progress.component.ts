@@ -7,6 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./progress.component.sass']
 })
 export class ProgressComponent implements OnInit {
+
   @Input() projectName: string = '';
   selected = 'option2';
 

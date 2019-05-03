@@ -60,6 +60,7 @@ export class IntegrationsComponent implements OnInit, AfterViewInit{
   toggleFlag__: boolean = true;
   public items__connected = [];
 
+  public message: string = ''
 
   updown__() {
     this.toggleFlag__ = !this.toggleFlag__;
@@ -86,10 +87,11 @@ add(item){
   }
   ngAfterViewInit(): void {
     let buttons = document.getElementsByClassName('polina');
-    let text = <HTMLElement> document.querySelector('.notifications');
+    //let text = <HTMLElement> document.querySelector('.notifications');
     fromEvent(buttons, 'click').subscribe(e => {
-        console.log("Click");
-      text.innerText = "New integration added.";
+      console.log("Click");
+      //text.innerText = "New integration added.";
+      this.message = "New integration added.";
     })
   }
 
