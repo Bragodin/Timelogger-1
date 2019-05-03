@@ -7,13 +7,16 @@ import { AuthService, GoogleLoginProvider } from 'angular5-social-login';
   styleUrls: ['./sign.component.sass']
 })
 export class SignComponent implements OnInit {
-  fullNameControl: FormControl;
-  emailControl: FormControl;
-  passwordControl: FormControl;
+  signForm: FormGroup;
   ngOnInit() {
-    this.fullNameControl = new FormControl('', [Validators.required, Validators.minLength(2)]);
-    this.emailControl = new FormControl('', [Validators.required, Validators.minLength(5)]);
-    this.passwordControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
+    this.signForm = new FormGroup({
+      "fullNameControl": new FormControl('', [Validators.required, Validators.minLength(2)]),
+      "emailControl": new FormControl('', [Validators.required, Validators.minLength(5),
+        Validators.pattern('^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$')
+      ]),
+      "passwordControl": new FormControl('', [Validators.required, Validators.minLength(6)
+      ]),
+    });
   }
   constructor( private socialAuthService: AuthService ) {}
 

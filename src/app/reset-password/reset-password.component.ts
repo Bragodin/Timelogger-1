@@ -6,9 +6,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./reset-password.component.sass']
 })
 export class ResetPasswordComponent implements OnInit {
-  emailControl: FormControl;
+  signForm: FormGroup;
   ngOnInit() {
-    this.emailControl = new FormControl('', [Validators.required, Validators.minLength(5)]);
+    this.signForm = new FormGroup({
+      "passwordControl": new FormControl('', [Validators.required, Validators.minLength(6)
+      ]),
+    });
   }
-
 }
