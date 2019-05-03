@@ -2,7 +2,7 @@
     <div class="sign__image">
     </div>
     <div class="sign__form_container">
-      <form novalidate (ngSubmit)="onSubmit(user)" class="sign__form">
+      <form novalidate (click)="socialSignIn()" class="sign__form">
         <h1 class="sign__form_name">Sign Up</h1>
         <button class="google">Sign up with google</button>
         <input type="text" placeholder="Full Name" [formControl]='fullNameControl' class="sign__form_input">

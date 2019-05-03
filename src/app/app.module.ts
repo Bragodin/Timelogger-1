@@ -55,6 +55,12 @@ import { ReactiveFormsModule  } from "@angular/forms";
 import { ProjectNameComponent } from './project-name/project-name.component';
 import { CompanyIntegrationComponent } from './company-integration/company-integration.component';
 
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+} from "angular5-social-login";
+
+import { getAuthServiceConfigs } from './socialloginConfig';
 
 @NgModule({
   declarations: [
@@ -117,9 +123,16 @@ import { CompanyIntegrationComponent } from './company-integration/company-integ
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    SocialLoginModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
