@@ -24,7 +24,7 @@ const itemMenu: Routes = [
   { path: 'employees/add_employee', component: AddEmployeeComponent}
 ];
 const routes: Routes = [
-  { path: 'main', component: PageComponent, children: itemMenu},
+  { path: '', component: PageComponent, children: itemMenu},
   { path: 'sign', component: SignComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'reset', component: ResetPasswordComponent },

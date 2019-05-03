@@ -1,14 +1,20 @@
 <div class="progress">
   <div class="progress__section progress-section__first">
     <input placeholder='{{projectName}}' class="progress__input progress__platform_input">
-    <div class="circle"></div>
+    <div class="circle circle__main" (click)="changeCondition()" [ngStyle]="{ 'background': activeColor }"></div>
+    <ng-template [ngIf]="!condition">
+      <div class="progress__color-picker">
+        <h4>Pick a color:</h4>
+        <div class="circle" *ngFor = "let item of colors" (click)='changeColor(item)' [ngStyle]="{ 'background': item }"></div>
+      </div>
+    </ng-template>
     <p>Code: #</p>
     <input class="progress__input progress__code_input">
-    <button class="progress-section__button"><a href="#">IN PROGRESS</a></button>
+    <button class="progress-section__button">IN PROGRESS</button>
     <div class="progress-section__first_buttons">
-      <button class="progress-section__first_buttons_button"><a href="">Pause<i class="material-icons material-icons__pause">pause</i></a></button>
-      <button class="progress-section__first_buttons_button"><a href="">Archive</a></button>
-      <button class="progress-section__first_buttons_button"><a href="">Save</a></button>
+      <button class="progress-section__first_buttons_button">Pause<i class="material-icons material-icons__pause">pause</i></button>
+      <button class="progress-section__first_buttons_button">Archive</button>
+      <button class="progress-section__first_buttons_button">Save</button>
     </div>
   </div>
   <div class="progress__section progress-section__second">
