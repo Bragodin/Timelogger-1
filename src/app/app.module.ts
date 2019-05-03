@@ -49,11 +49,10 @@ import { EmployeeInformationComponent } from './employee-information/employee-in
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
 import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
-import { TableComponent } from './table/table.component';
 
 import { CellComponent } from './table/cell/cell.component';
 import { ReactiveFormsModule  } from "@angular/forms";
-import { Information } from './donut-chart/example.inform';
+import { ProjectNameComponent } from './project-name/project-name.component';
 
 
 @NgModule({
@@ -94,6 +93,7 @@ import { Information } from './donut-chart/example.inform';
     BlockComponent,
     ApproveRejectForgetComponent,
     TableComponent,
+    ProjectNameComponent,
 
   ],
   imports: [

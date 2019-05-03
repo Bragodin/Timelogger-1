@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./progress.component.sass']
 })
 export class ProgressComponent implements OnInit {
+  @Input() projectName: string = '';
   selected = 'option2';
 
   date = new FormControl(new Date());

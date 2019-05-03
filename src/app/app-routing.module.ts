@@ -10,12 +10,14 @@ import {CompanySettingsComponent} from "./company-settings/company-settings.comp
 import {ProjectComponent} from "./project/project.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {TimelogComponent} from "./timelog/timelog.component";
+import {ProjectNameComponent} from "./project-name/project-name.component";
 
 
 const itemMenu: Routes = [
   { path: 'timelog-day', component: TimelogComponent},
   { path: 'profile', component: ProfileComponent},
-  { path: 'create_pro', component: CreateProjectComponent},
+  { path: 'projects/create_pro', component: CreateProjectComponent},
+  { path: 'projects/:project_name', component: ProjectNameComponent},
   { path: 'projects', component: ProjectComponent},
   { path: 'employees', component: EmployeesPageComponent},
   { path: 'company-settings', component: CompanySettingsComponent},

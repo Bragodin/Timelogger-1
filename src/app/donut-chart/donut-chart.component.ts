@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'chart.js';
 
-import { items } from './example.inform';
 
 import { items } from './donutChartDate';
 
