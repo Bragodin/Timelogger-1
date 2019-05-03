@@ -11,6 +11,7 @@ import {ProjectComponent} from "./project/project.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {TimelogComponent} from "./timelog/timelog.component";
 import {ProjectNameComponent} from "./project-name/project-name.component";
+import {CompanyIntegrationComponent} from "./company-integration/company-integration.component";
 
 
 const itemMenu: Routes = [
@@ -21,6 +22,7 @@ const itemMenu: Routes = [
   { path: 'projects', component: ProjectComponent},
   { path: 'employees', component: EmployeesPageComponent},
   { path: 'company-settings', component: CompanySettingsComponent},
+  { path: 'company-integration', component: CompanyIntegrationComponent},
   { path: 'employees/add_employee', component: AddEmployeeComponent}
 ];
 const routes: Routes = [
