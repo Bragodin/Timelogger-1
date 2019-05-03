@@ -2,15 +2,13 @@
     <div class="sign__image">
     </div>
     <div class="sign__form_container">
-      <h1 class="sign__form_name">Sign Up</h1>
+      <h1 class="sign__form_name">Sign In</h1>
       <button class="sign__button_google" (click)="socialSignIn()" >Sign Up With Google</button>
       <form novalidate class="sign__form">
         <input type="text" placeholder="Full Name" [formControl]='fullNameControl' class="sign__form_input">
-        <input type="email" placeholder="Email" [formControl]='emailControl' class="sign__form_input">
         <input type="password" placeholder="Password" [formControl]='passwordControl' class="sign__form_input">
         <button class='sign__form_button' type="submit">Sign up</button>
       </form>
-      <p class="sign__form_sign-in">Already have an account?<a href="#">Sign In</a></p>
+      <p class="sign__form_sign-in">I don’t have account<a href="#">Sign Un</a></p>
     </div>
   </div>
-

@@ -17,7 +17,7 @@ import { SignComponent } from './sign/sign.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { MatTableModule } from '@angular/material/table';
-import {MatInputModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material';
+import { MatInputModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { WorkloadComponent } from './workload/workload.component';
 import { ChartsModule } from 'ng2-charts';
@@ -30,7 +30,7 @@ import { CompanySettingsComponent } from './company-settings/company-settings.co
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio'
 import { IntegrationsComponent } from './integrations/integrations.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule} from '@angular/material/datepicker';
 import { ExportComponent } from './export/export.component'
 import { FormsModule } from '@angular/forms';
 import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
@@ -60,6 +60,7 @@ import {
 } from "angular5-social-login";
 
 import { getAuthServiceConfigs } from './socialloginConfig';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +101,7 @@ import { getAuthServiceConfigs } from './socialloginConfig';
     ApproveRejectForgetComponent,
     TableComponent,
     ProjectNameComponent,
+    SignInComponent,
 
   ],
   imports: [

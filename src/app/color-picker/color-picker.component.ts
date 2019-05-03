@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventEmitter, Input, Output } from '@angular/core';
+
 @Component({
   selector: 'app-color-picker',
   templateUrl: './color-picker.component.html',
@@ -33,28 +33,6 @@ export class ColorPickerComponent implements OnInit {
     '#c97545',
     '#c1800b'
   ];
-  public show = false;
-  public toggleColors() {
-    this.show = !this.show;
-  }
-  public changeColor(color: string) {
-    this.color = color;
-    this.event.emit(this.color); // Return color
-    this.show = false;
-  }
-
-
-  public changeColorManual(color: string) {
-    const isValid = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color);
-
-    if (isValid) {
-      this.color = color;
-      this.event.emit(this.color); // Return color
-    }
-  }
-  @Input() heading: string;
-  @Input() color: string;
-  @Output() event = new EventEmitter();
   constructor() { }
 
   ngOnInit() {

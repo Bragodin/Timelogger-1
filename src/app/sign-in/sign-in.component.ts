@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService, GoogleLoginProvider } from 'angular5-social-login';
 @Component({
-  selector: 'app-sign',
-  templateUrl: './sign.component.html',
-  styleUrls: ['./sign.component.sass']
+  selector: 'app-sign-in',
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.sass']
 })
-export class SignComponent implements OnInit {
+export class SignInComponent implements OnInit {
   fullNameControl: FormControl;
   emailControl: FormControl;
   passwordControl: FormControl;

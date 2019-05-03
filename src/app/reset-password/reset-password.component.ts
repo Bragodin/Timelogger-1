@@ -1,21 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-reset-password',
   templateUrl: './reset-password.component.html',
   styleUrls: ['./reset-password.component.sass']
 })
 export class ResetPasswordComponent implements OnInit {
-
-  toggleFlag: boolean = true;
-
-  send() {
-    this.toggleFlag = !this.toggleFlag;
-  }
-
-  constructor() { }
-
+  emailControl: FormControl;
   ngOnInit() {
+    this.emailControl = new FormControl('', [Validators.required, Validators.minLength(5)]);
   }
 
 }

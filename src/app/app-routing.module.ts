@@ -11,7 +11,7 @@ import {ProjectComponent} from "./project/project.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {TimelogComponent} from "./timelog/timelog.component";
 import {ProjectNameComponent} from "./project-name/project-name.component";
-
+import { SignInComponent } from  './sign-in/sign-in.component';
 
 const itemMenu: Routes = [
   { path: 'timelog-day', component: TimelogComponent},
@@ -24,8 +24,9 @@ const itemMenu: Routes = [
   { path: 'employees/add_employee', component: AddEmployeeComponent}
 ];
 const routes: Routes = [
-  { path: '', component: PageComponent, children: itemMenu},
+  { path: 'main', component: PageComponent, children: itemMenu},
   { path: 'sign', component: SignComponent },
+  { path: 'sign-in', component: SignInComponent },
   { path: 'reset', component: ResetPasswordComponent },
 ];
 
