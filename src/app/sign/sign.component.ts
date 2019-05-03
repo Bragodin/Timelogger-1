@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { getHostElement } from '@angular/core/src/render3';
+
+import {
+  AuthService,
+  GoogleLoginProvider
+} from 'angular5-social-login';
 @Component({
   selector: 'app-sign',
   templateUrl: './sign.component.html',
@@ -9,15 +15,19 @@ export class SignComponent implements OnInit {
   fullNameControl: FormControl;
   emailControl: FormControl;
   passwordControl: FormControl;
-  constructor() { }
   ngOnInit() {
     this.fullNameControl = new FormControl('', [Validators.required, Validators.minLength(2)]);
     this.emailControl = new FormControl('', [Validators.required, Validators.minLength(5)]);
     this.passwordControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
-
-    this.fullNameControl.statusChanges.subscribe((status) => console.log(status));
-    this.emailControl.statusChanges.subscribe((status) => console.log(status));
-    this.passwordControl.statusChanges.subscribe((status) => console.log(status));
   }
+  constructor( private socialAuthService: AuthService ) {}
 
+  public socialSignIn(socialPlatform : string) {
+    let socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData) => {
+        console.log(socialPlatform + " sign in data : " , userData);
+      }
+    );
+  }
 }

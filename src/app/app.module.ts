@@ -54,6 +54,12 @@ import { CellComponent } from './table/cell/cell.component';
 import { ReactiveFormsModule  } from "@angular/forms";
 import { ProjectNameComponent } from './project-name/project-name.component';
 
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+} from "angular5-social-login";
+
+import { getAuthServiceConfigs } from './socialloginConfig';
 
 @NgModule({
   declarations: [
@@ -115,9 +121,16 @@ import { ProjectNameComponent } from './project-name/project-name.component';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    SocialLoginModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
