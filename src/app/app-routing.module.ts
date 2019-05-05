@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateProjectComponent } from './create-project/create-project.component';
-import { SignUpComponent } from './sign-up/sign.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { RestorePasswordComponent } from './restore-password/restore-password.component';
 import { PageComponent } from './page/page.component';
 import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
@@ -32,9 +32,9 @@ const itemMenu: Routes = [
 const routes: Routes = [
   { path: '', component: PageComponent, children: itemMenu},
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'new-password', component: SetNewPasswordComponent },
+  { path: 'set-new-password', component: SetNewPasswordComponent },
   { path: 'sign-in', component: SignInComponent },
-  { path: 'reset', component: ResetPasswordComponent },
+  { path: 'restore-password', component: RestorePasswordComponent },
 ];
 
 @NgModule({

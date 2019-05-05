@@ -13,8 +13,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { SignUpComponent } from './sign-up/sign.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { RestorePasswordComponent } from './restore-password/restore-password.component';
 import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material';
@@ -73,7 +73,7 @@ import { SetNewPasswordComponent } from './set-new-password/set-new-password.com
     PageComponent,
     CreateProjectComponent,
     SignUpComponent,
-    ResetPasswordComponent,
+    RestorePasswordComponent,
     EmployeesPageComponent,
     AddEmployeeComponent,
     WorkloadComponent,
