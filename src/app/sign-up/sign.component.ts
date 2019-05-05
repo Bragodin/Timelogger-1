@@ -6,7 +6,7 @@ import { AuthService, GoogleLoginProvider } from 'angular5-social-login';
   templateUrl: './sign.component.html',
   styleUrls: ['./sign.component.sass']
 })
-export class SignComponent implements OnInit {
+export class SignUpComponent implements OnInit {
   signForm: FormGroup;
   ngOnInit() {
     this.signForm = new FormGroup({
