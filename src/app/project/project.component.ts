@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from "@angular/material";
 
-export interface PeriodicElement {
+export interface Projects {
+  color: string;
   name: string;
-  position: number;
-
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Skype', },
-  {position: 2, name: 'Windows'},
-  {position: 3, name: 'Word'},
+
+const ELEMENT_DATA: Projects[] = [
+  {color: '#FF007A', name: 'Skype', },
+  {color: '#FFF500', name: 'Windows', },
+  {color: '#AD5300', name: 'Word', },
 
 ];
 
@@ -20,8 +20,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./project.component.sass']
 })
 export class ProjectComponent implements OnInit {
-
-  displayedColumns: string[] = ['position', 'name'];
+  condition: boolean = false;
+  displayedColumns: string[] = ['color', 'name'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -30,5 +30,8 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  changeCondition(){
+    this.condition === true ? this.condition = false : this.condition = true;
+    console.log('Click');
+  }
 }

@@ -70,13 +70,13 @@ export class IntegrationsComponent implements OnInit, AfterViewInit{
   }
 
 
-add(item){
+  add(item){
     this.items__connected.push(item);
     this.items__add.forEach((item__add, i) => {
-    if (item__add.id === item.id) {
-      this.items__add.splice(i, 1)
-    }
-  })
+      if (item__add.id === item.id) {
+        this.items__add.splice(i, 1)
+      }
+    })
   }
   constructor() {
 
