@@ -11,6 +11,7 @@ import {ProjectComponent} from "./project/project.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {TimelogComponent} from "./timelog/timelog.component";
 import {ProjectNameComponent} from "./project-name/project-name.component";
+import { SignInComponent } from  './sign-in/sign-in.component';
 import {CompanyIntegrationComponent} from "./company-integration/company-integration.component";
 
 
@@ -28,6 +29,7 @@ const itemMenu: Routes = [
 const routes: Routes = [
   { path: '', component: PageComponent, children: itemMenu},
   { path: 'sign', component: SignComponent },
+  { path: 'sign-in', component: SignInComponent },
   { path: 'reset', component: ResetPasswordComponent },
 ];
 
