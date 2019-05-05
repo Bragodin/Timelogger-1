@@ -8,12 +8,12 @@
   </div>
   <i (click)=updown__() class="material-icons">keyboard_arrow_down</i>
 </div>
-<h1 class="polina">POLINA</h1>
+
 <ng-template #elseBlock__>
   <div class="inline">
     <h3>Connected integrations: </h3>
     <div class="logo settings" *ngFor="let item of items__connected">
-      <div class="icon" [ngStyle]="{'background': item.background}">
+      <div class="icon" [ngStyle]="{'background': item.background}" routerLink="/{{item.route}}">
         <i class="material-icons">settings</i>
       </div>
     </div>
@@ -43,4 +43,3 @@
 
     </ng-template>
 </ng-template>
-<div class="notifications"></div>

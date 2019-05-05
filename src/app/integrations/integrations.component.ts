@@ -22,6 +22,7 @@ export class IntegrationsComponent implements OnInit, AfterViewInit{
       id: 2,
       name: 'GitHub',
       background: 'url(./assets/image/GitHub.svg)',
+      route: 'company-integration',
     },
     {
       id: 3,

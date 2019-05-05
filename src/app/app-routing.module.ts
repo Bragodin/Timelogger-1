@@ -12,7 +12,12 @@ import {ProfileComponent} from "./profile/profile.component";
 import {TimelogComponent} from "./timelog/timelog.component";
 import {ProjectNameComponent} from "./project-name/project-name.component";
 import { SignInComponent } from  './sign-in/sign-in.component';
+
 import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
+
+import {CompanyIntegrationComponent} from "./company-integration/company-integration.component";
+
+
 const itemMenu: Routes = [
   { path: 'timelog-day', component: TimelogComponent},
   { path: 'profile', component: ProfileComponent},
@@ -21,6 +26,7 @@ const itemMenu: Routes = [
   { path: 'projects', component: ProjectComponent},
   { path: 'employees', component: EmployeesPageComponent},
   { path: 'company-settings', component: CompanySettingsComponent},
+  { path: 'company-integration', component: CompanyIntegrationComponent},
   { path: 'employees/add_employee', component: AddEmployeeComponent}
 ];
 const routes: Routes = [

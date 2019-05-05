@@ -53,6 +53,7 @@ import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-re
 import { CellComponent } from './table/cell/cell.component';
 import { ReactiveFormsModule  } from "@angular/forms";
 import { ProjectNameComponent } from './project-name/project-name.component';
+import { CompanyIntegrationComponent } from './company-integration/company-integration.component';
 
 import {
   SocialLoginModule,
@@ -103,7 +104,11 @@ import { SetNewPasswordComponent } from './set-new-password/set-new-password.com
     TableComponent,
     ProjectNameComponent,
     SignInComponent,
+
     SetNewPasswordComponent,
+
+    CompanyIntegrationComponent,
+
 
   ],
   imports: [
