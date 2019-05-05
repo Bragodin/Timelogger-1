@@ -9,7 +9,8 @@ export class ResetPasswordComponent implements OnInit {
   signForm: FormGroup;
   ngOnInit() {
     this.signForm = new FormGroup({
-      "passwordControl": new FormControl('', [Validators.required, Validators.minLength(6)
+      "emailControl": new FormControl('', [Validators.required, Validators.minLength(5),
+        Validators.pattern('^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$')
       ]),
     });
   }

@@ -13,7 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { SignComponent } from './sign/sign.component';
+import { SignUpComponent } from './sign-up/sign.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { MatTableModule } from '@angular/material/table';
@@ -61,6 +61,7 @@ import {
 
 import { getAuthServiceConfigs } from './socialloginConfig';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ProfileComponent,
     PageComponent,
     CreateProjectComponent,
-    SignComponent,
+    SignUpComponent,
     ResetPasswordComponent,
     EmployeesPageComponent,
     AddEmployeeComponent,
@@ -102,6 +103,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     TableComponent,
     ProjectNameComponent,
     SignInComponent,
+    SetNewPasswordComponent,
 
   ],
   imports: [
