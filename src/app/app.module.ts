@@ -15,8 +15,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { SignComponent } from './sign/sign.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { RestorePasswordComponent } from './restore-password/restore-password.component';
 import { EmployeesPageComponent } from './employees-page/employees-page.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule, MatNativeDateModule, MatSlideToggleModule} from '@angular/material';
@@ -33,7 +33,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { MatRadioModule } from '@angular/material/radio'
 import { IntegrationsComponent } from './integrations/integrations.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule} from '@angular/material/datepicker';
 import { ExportComponent } from './export/export.component'
 import { ApprovalPeriodComponent } from './approval-period/approval-period.component';
 import { CommentsComponent } from './comments/comments.component';
@@ -51,23 +51,33 @@ import { EmployeeInformationComponent } from './employee-information/employee-in
 import { HeadComponent } from './head/head.component';
 import { BlockComponent } from './block/block.component';
 import { ApproveRejectForgetComponent } from './approve-reject-forget/approve-reject-forget.component';
-import { TableComponent } from './table/table.component';
 
 import { ReactiveFormsModule  } from "@angular/forms";
-import { FormsModule } from '@angular/forms';
+import { ProjectNameComponent } from './project-name/project-name.component';
+import { CompanyIntegrationComponent } from './company-integration/company-integration.component';
+import { TableComponent } from './table/table.component';
 
-import { CellComponent } from './table/cell/cell.component';
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+} from "angular5-social-login";
+
+import { getAuthServiceConfigs } from './socialloginConfig';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
+
 
 @NgModule({
   declarations: [
-    CellComponent,
-    TableComponent,
     AppComponent,
+    TableComponent,
+
+
     ProfileComponent,
     PageComponent,
     CreateProjectComponent,
-    SignComponent,
-    ResetPasswordComponent,
+    SignUpComponent,
+    RestorePasswordComponent,
     EmployeesPageComponent,
     AddEmployeeComponent,
     WorkloadComponent,
@@ -95,8 +105,13 @@ import { CellComponent } from './table/cell/cell.component';
     HeadComponent,
     BlockComponent,
     ApproveRejectForgetComponent,
-    TableComponent,
-    CellComponent,
+    ProjectNameComponent,
+    SignInComponent,
+
+    SetNewPasswordComponent,
+
+    CompanyIntegrationComponent,
+
 
   ],
   imports: [
@@ -117,11 +132,17 @@ import { CellComponent } from './table/cell/cell.component';
     MatSlideToggleModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    SocialLoginModule,
+  ],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
